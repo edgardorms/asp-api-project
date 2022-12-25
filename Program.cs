@@ -20,7 +20,7 @@ app.UseHttpsRedirection();
 
 app.UseAuthorization();
 
-app.UseTimeMiddleware();
+//app.UseTimeMiddleware();
 
 app.MapControllers();
 
