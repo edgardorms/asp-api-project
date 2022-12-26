@@ -9,13 +9,11 @@ namespace ApiProject.Controllers;
 public class CategoryController : ControllerBase
 {
     ICategoryService categoryService;
-    TasksContext dbcontext;
 
 
-    public CategoryController(ICategoryService service, TasksContext db)
+    public CategoryController(ICategoryService service)
     {
         categoryService = service;
-        dbcontext = db;
 
     }
 
@@ -46,16 +44,5 @@ public class CategoryController : ControllerBase
     {
         categoryService.Delete(id);
         return Ok();
-    }
-
-
-    [HttpGet]
-    [Route("createdb")]
-    public IActionResult CreateDatabase()
-    {
-        dbcontext.Database.EnsureCreated();
-
-        return Ok();
-
     }
 }
