@@ -1,4 +1,6 @@
+using ApiProject;
 using ApiProject.Services;
+
 {
     
 }
@@ -10,8 +12,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddSqlServer<TasksContext>(builder.Configuration.GetConnectionString("connectTasks"));
 builder.Services.AddScoped<ICategoryService, CategoryService>();
-builder.Services.AddScoped<ITareasService, TareasService>();
+builder.Services.AddScoped<ITaskService, TaskService>();
 
 
 var app = builder.Build();

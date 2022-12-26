@@ -3,14 +3,14 @@ using ApiProject.Models;
 using ApiProject.Services;
 using Task = ApiProject.Models.Task;
 
-namespace webapi.Controllers;
+namespace ApiProject.Controllers;
 
 [Route("api/[controller]")]
 public class TaskController : ControllerBase
 {
-    ITareasService tareasService;
+    ITaskService tareasService;
 
-    public TaskController(ITareasService service)
+    public TaskController(ITaskService service)
     {
         tareasService = service;
     }

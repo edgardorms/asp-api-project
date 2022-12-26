@@ -4,11 +4,11 @@ using Task = System.Threading.Tasks.Task;
 
 namespace ApiProject.Services;
 
-public class TareasService : ITareasService
+public class TaskService : ITaskService
 {
     TasksContext context;
 
-    public TareasService(TasksContext dbcontext)
+    public TaskService(TasksContext dbcontext)
     {
         context = dbcontext;
     }
@@ -53,7 +53,7 @@ public class TareasService : ITareasService
 
 }
 
-public interface ITareasService
+public interface ITaskService
 {
     IEnumerable<Tarea> Get();
     Task Save(Tarea Tarea);

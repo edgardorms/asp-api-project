@@ -2,16 +2,21 @@ using Microsoft.AspNetCore.Mvc;
 using ApiProject.Models;
 using ApiProject.Services;
 
-namespace webapi.Controllers;
+namespace ApiProject.Controllers;
 
+[ApiController]
 [Route("api/[controller]")]
-public class CategoryController: ControllerBase
+public class CategoryController : ControllerBase
 {
     ICategoryService categoryService;
+    TasksContext dbcontext;
 
-    public CategoryController(ICategoryService service)
+
+    public CategoryController(ICategoryService service, TasksContext db)
     {
         categoryService = service;
+        dbcontext = db;
+
     }
 
     [HttpGet]
@@ -41,6 +46,16 @@ public class CategoryController: ControllerBase
     {
         categoryService.Delete(id);
         return Ok();
-    }    
+    }
 
+
+    [HttpGet]
+    [Route("createdb")]
+    public IActionResult CreateDatabase()
+    {
+        dbcontext.Database.EnsureCreated();
+
+        return Ok();
+
+    }
 }
