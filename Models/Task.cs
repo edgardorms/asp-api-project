@@ -17,18 +17,12 @@ namespace ApiProject.Models
 
         public string Description { get; set; }
 
-        public int Points { get; set; }
-
-        public int Stars { get; set; }
-
         public Priority TaskPriority { get; set; }
 
         public DateTime DateTimeCreated { get; set; }
 
         public virtual Category Category { get; set; }
 
-        //[NotMapped]
-        public string Resumen { get; set; } 
     }
     
     public enum Priority

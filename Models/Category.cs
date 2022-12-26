@@ -15,8 +15,6 @@ namespace ApiProject.Models
 
         public int Effort { get; set; }
 
-        public int Area { get; set; }
-
         public virtual ICollection<Task> Tasks { get; set; }
     }
 }
