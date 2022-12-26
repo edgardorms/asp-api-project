@@ -37,5 +37,5 @@
 </ul>
 
 <h2>En el controlador de base de datos, se pueden realizar las siguientes operaciones:</h2>
-<ul>GET /api/Database/createdb: crea la base de datos de la aplicación si todavía no existe.</ul>
+<li>GET /api/Database/createdb: crea la base de datos de la aplicación si todavía no existe.</li>
 
