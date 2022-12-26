@@ -7,35 +7,35 @@
 
 <li>PUT: utilizado para actualizar un recurso existente.</li>
 
-DELETE: utilizado para eliminar un recurso existente.
-<li></li>
+<li>DELETE: utilizado para eliminar un recurso existente.</li>
 
 </ul>
 
 <p>La API cuenta con dos controladores, uno para el manejo de categorías (CategoryController) y otro para el manejo de tareas (TaskController). Además, cuenta con un controlador de base de datos (DatabaseController).</p>
 
-En el controlador de categorías, se pueden realizar las siguientes operaciones:
+<h2>En el controlador de categorías, se pueden realizar las siguientes operaciones:</h2>
 
-GET /api/Category: obtiene una lista de todas las categorías.
+<li>GET /api/Category: obtiene una lista de todas las categorías.</li>
 
-POST /api/Category: crea una nueva categoría. El cuerpo de la solicitud debe contener una representación en formato JSON de la categoría a crear.
+<li>POST /api/Category: crea una nueva categoría. El cuerpo de la solicitud debe contener una representación en formato JSON de la categoría a crear.</li>
 
-PUT /api/Category/{id}: actualiza la categoría con el ID especificado. El cuerpo de la solicitud debe contener una representación en formato JSON de la categoría actualizada.
+<li>PUT /api/Category/{id}: actualiza la categoría con el ID especificado. El cuerpo de la solicitud debe contener una representación en formato JSON de la categoría actualizada.</li>
 
-DELETE /api/Category/{id}: elimina la categoría con el ID especificado.
+<li>DELETE /api/Category/{id}: elimina la categoría con el ID especificado.</li>
+</ul>
 
-En el controlador de tareas, se pueden realizar las siguientes operaciones:
+<h2>En el controlador de tareas, se pueden realizar las siguientes operaciones:</h2>
 
-GET /api/Task: obtiene una lista de todas las tareas.
+<ul>
+<li>GET /api/Task: obtiene una lista de todas las tareas.</li>
 
-POST /api/Task: crea una nueva tarea. El cuerpo de la solicitud debe contener una representación en formato JSON de la tarea a crear.
+<li>POST /api/Task: crea una nueva tarea. El cuerpo de la solicitud debe contener una representación en formato JSON de la tarea a crear.</li>
 
-PUT /api/Task/{id}: actualiza la tarea con el ID especificado. El cuerpo de la solicitud debe contener una representación en formato JSON de la tarea actualizada.
+<li>PUT /api/Task/{id}: actualiza la tarea con el ID especificado. El cuerpo de la solicitud debe contener una representación en formato JSON de la tarea actualizada.</li>
 
-DELETE /api/Task/{id}: elimina la tarea con el ID especificado.
+<li>DELETE /api/Task/{id}: elimina la tarea con el ID especificado.</li>
+</ul>
 
-En el controlador de base de datos, se pueden realizar las siguientes operaciones:
+<h2>En el controlador de base de datos, se pueden realizar las siguientes operaciones:</h2>
+<ul>GET /api/Database/createdb: crea la base de datos de la aplicación si todavía no existe.</ul>
 
-GET /api/Database/createdb: crea la base de datos de la aplicación si todavía no existe.
-
-La API también incluye un esquema de datos para la representación de categorías y tareas en formato JSON.
