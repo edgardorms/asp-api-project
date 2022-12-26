@@ -5,6 +5,7 @@ using Task = ApiProject.Models.Task;
 
 namespace ApiProject.Controllers;
 
+[ApiController]
 [Route("api/[controller]")]
 public class TaskController : ControllerBase
 {
